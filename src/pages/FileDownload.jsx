@@ -23,7 +23,6 @@ const FileDownload = () => {
   const navigate = useNavigate();
   let { id } = useParams();
 
-  // const API_URL = `http://localhost:9999/api/v1/file/${id}`;
   const API_URL = `${process.env.REACT_APP_FILE_GET_ONE_URL}/${id}`;
   useEffect(() => {
     try {
@@ -65,7 +64,6 @@ const FileDownload = () => {
       password: passwordRef.current.value,
     };
 
-    // const url = `http://localhost:9999/api/v1/download/${id}`;
     const url = `${process.env.REACT_APP_FILE_DOWNLOAD_URL}/${id}`;
 
     const headers = {
@@ -91,7 +89,6 @@ const FileDownload = () => {
         position: 'bottom-center',
         className: 'bg-warning text-light',
       });
-      // alert(error.response.data.message);
     }
   };
 

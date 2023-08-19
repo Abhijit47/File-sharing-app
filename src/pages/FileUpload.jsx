@@ -53,7 +53,6 @@ const FileUpload = () => {
       formData.append('fileName', fileName);
       formData.append('password', password);
       const res = await axios.post(
-        // 'http://localhost:9999/api/v1/upload',
         `${process.env.REACT_APP_FILE_UPLOAD_URL}`,
         formData,
         password,
